@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="e474887e353f75d06c4dfc2347c0b496">
+    <title>AB Studio - Book All </title>
+    <meta name="keywords" content="2035 books, trending books, book downloads, educational PDFs, student resources, free book PDFs, study materials, best books 2035,book 2025 , book 2025 class 6 ,book 2025 class 7 ,book 2025 class 1,book 2025 class 2,book 2025 class 3,book 2025 class 4, book 2025 class 5,book 2025 class 7,book 2025 class 8 , book 2025 PDFs ,class 8 book 2025,class 7 book 2025,2025 books download,Free PDF books 2025,2025 textbooks free download,Best books 2025 free download,Class 6 math book 2025 PDF,Math textbook 2025 free download,Algebra books 2025 PDF,2025 books download, Free PDF books 2025, 2025 textbooks free download, Best books 2025 free download, Download school books 2025, 2025 educational books PDF, Free 2025 eBooks for students, Class 1 to 10 books 2025 PDF, NCERT books 2025 free, English books 2025 download, Class 6 math book 2025 PDF, Download math solutions 2025, Math textbook 2025 free download, Algebra books 2025 PDF, Geometry books 2025 download free, Science textbooks 2025 download, Physics book 2025 free PDF, Biology textbook 2025 download, Chemistry books 2025 free, Science guidebooks 2025 PDF, English grammar books 2025, Bengali books 2025 PDF free download, Hindi books 2025 for students, Literature books 2025 PDF free, Storybooks for students 2025, Class 1 books 2025 download, Class 2 books free PDF 2025, Class 3 all subjects books 2025, Class 4 study materials PDF 2025, Class 5 books 2025 free download, Class 6 textbooks PDF 2025, Class 7 free PDF download 2025, Class 8 books 2025 PDF, Class 9 all books free 2025, Class 10 textbooks PDF 2025, SSC books 2025 PDF free, HSC preparation books 2025, University admission books 2025, Competitive exam books 2025, Board exam guidebooks 2025, Most downloaded books 2025, Trending textbooks 2025, Top 10 books 2025 PDF, Best free eBooks 2025, Online book downloads 2025,">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Google Sans', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            text-align: left;
+            background-color: #2c2c2c;
+            border-radius: 10px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        select {
+            background-color: #3a3a3a;
+            color: #ffffff;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .book-list {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .book {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #3a3a3a;
+            border-radius: 5px;
+        }
+
+        .book span {
+            font-size: 16px;
+        }
+
+        .book button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .book button:hover {
+            background-color: #f50101;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #1f1f1f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #cccccc;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            background-color: #d81912;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            margin-top: 10px;
+            background-color: #2c2c2c;
+            padding: 5px;
+            border-radius: 3px;
+            text-align: left;
+        }
+
+        .contact-form label {
+            font-size: 10px;
+            display: block;
+            margin: 15px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: white;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #b30000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="AB Studio Logo">
+        <h1>AB Studio - class 1-8 all book 2025</h1>
+    </header>
+
+    <div class="container">
+        <label for="class-selector">Select Class:</label>
+        <select id="class-selector" onchange="showBooks()">
+            <option value="">-- Select Class --</option>
+            <option value="class-1">Class 1</option>
+            <option value="class-2">Class 2</option>
+            <option value="class-3">Class 3</option>
+            <option value="class-4">Class 4</option>
+            <option value="class-5">Class 5</option>
+            <option value="class-6">Class 6</option>
+            <option value="class-7">Class 7</option>
+            <option value="class-8">Class 8</option>
+            <option value="class-9">Our more servis</option>
+            <option value="class-10">Our scoial</option>
+            <option value="class-11">our other site</option>
+        </select>
+
+        <div id="book-list" class="book-list">
+            <!-- Books will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <h2>Report an Issue</h2>
+        <form action="mailto:abcoinseo@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Report:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Report</button>
+        </form>
+    </div>
+
+    <footer>
+        <a href="https://whomeenoaglauns.com/4/8733913" target="_blank">Click Here for Our Ads</a>
+    </footer>
+
+    <script>
+        const books = {
+            "class-1": [
+                { name: "আমার বাংলা বই", link: "https://drive.google.com/file/d/1XFeh1kDvWoBtYza8jft5cwrPVhEcseD5/view" },
+                { name: "English for Today", link: "https://drive.google.com/file/d/1fEi4o-cRb-uIuXb0YllOylOLwPKg9003/view" },
+                { name: "প্রাথমিক গণিত", link: "https://drive.google.com/file/d/1sQ9gxdNIKpsBwvbCfOV0Ek6Xmjw90W9B/view" }
+            ],
+            "class-2": [
+                { name: "আমার বাংলা বই", link: "https://drive.google.com/file/d/1HuxmITeaPXI6ceQMjfmqnHeEs3ayXXPX/view?usp=drive_link" },
+                { name: "English for Today", link: "https://drive.google.com/file/d/1WLzfONKOphxBfSOMjbCh5N4VTRg4xHCS/view" },
+                { name: "প্রাথমিক গণিত", link: "https://drive.google.com/file/d/1yHKtF6XK4LA6kMNEmZODJpPRhYZb_SI7/view" }
+            ],
+            "class-3": [
+                { name: "আমার বাংলা বই", link: "https://drive.google.com/file/d/1XFeh1kDvWoBtYza8jft5cwrPVhEcseD5/viewhttps://drive.google.com/file/d/1W0Obh1t58ZefSlR3KLAhudYYZnGo6R8_/view" },
+                { name: "English for Today", link: "https://drive.google.com/file/d/1xlwFzemKHnD3cos1LEbmeEfQN8TmqSnQ/view" },
+                { name: "প্রাথমিক গণিত", link: "https://drive.google.com/file/d/1LDc6xGN3dHgKDp5L5mnbAm3ltAf5f-iI/view" },
+                { name: "প্রাথমিক বিজ্ঞান", link: "https://drive.google.com/file/d/17qdGxwZxFOlJY0qcyRwl_tNEJOltNbMG/view" },
+                { name: "বাংলাদেশ ও বিশ্বপরিচয়", link: "https://drive.google.com/file/d/1jPioH7FZuh_YL3bArM79Msm8PohIoavk/view" },
+
+                { name: "ইসলাম শিক্ষা", link: "https://drive.google.com/file/d/1GmzcsEUIcZo4DQLuMuRFzLo_XTM154l0/view" },
+
+                { name: "হিন্দুধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1xyMi4AszvR8MozOu3lCdoIIjaOcaofTM/view" },
+
+                { name: "বৌদ্ধধর্ম শিক্ষা", link: "https://drive.google.com/file/d/12uwo7ctpu-5VRysFzTqTN_t_MIqBGEo9/view" },
+                
+                { name: "খ্রিষ্টধর্ম শিক্ষা", link: "https://drive.google.com/file/d/13NbX6JIfOVvtgWv-64VB10lAo_5l4vCS/view" }
+            ],
+
+            "class-4": [
+            { name: "আমার বাংলা বই", link: "https://drive.google.com/file/d/1n3TZcBdT8LQppREBDU3h6oOhTmlGlrY_/view?usp=drive_link" },
+                { name: "English for Today", link: "https://drive.google.com/file/d/1O6Uot8tmM1sktx875bablzbXoB83A1JK/view?usp=drive_link" },
+                { name: "প্রাথমিক গণিত", link: "https://drive.google.com/file/d/1BIpqtGydNFcZ_fmFRhRuNHxd2AjcwGT6/view?usp=drive_link" },
+                { name: "প্রাথমিক বিজ্ঞান", link: "https://drive.google.com/file/d/1I4tHlMPLoeCKHL_HbHgTC_UL9nOi33M7/view?usp=drive_link" },
+                { name: "বাংলাদেশ ও বিশ্বপরিচয়", link: "https://drive.google.com/file/d/1u-YcHCshH8Zn9X04S6ZTzqJ8ebmLG-dJ/view?usp=drive_link" },
+
+                { name: "ইসলাম শিক্ষা", link: "https://drive.google.com/file/d/1shmJzRTTZzGAdeKXgqFcBov1Oj5oBIOV/view?usp=drive_link" },
+
+                { name: "হিন্দুধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1MvBd2bfO709qHvshW12ovvuwcrblXHzI/view?usp=drive_link" },
+
+                { name: "বৌদ্ধধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1MvBd2bfO709qHvshW12ovvuwcrblXHzI/view?usp=drive_link" },
+                
+                { name: "খ্রিষ্টধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1fxX5PcCGAiy2CNUhH-B5sPqromAFVSB_/view?usp=drive_link" }
+            ],
+
+            "class-5": [
+            { name: "আমার বাংলা বই", link: "https://drive.google.com/file/d/1z8EUXLK7p8LghxXzBC2Fhlym02UQVYja/view?usp=drive_link" },
+                { name: "English for Today", link: "https://drive.google.com/file/d/1mYMaa4iG8exP-HjtT_f7Jgss76o3Nd4H/view?usp=drive_link" },
+                { name: "প্রাথমিক গণিত", link: "https://drive.google.com/file/d/18C-iB1tOSYG5qwBjRpV3NNivFqDvsCec/view?usp=drive_link" },
+                { name: "প্রাথমিক বিজ্ঞান", link: "https://drive.google.com/file/d/1ru6RSNpp-F2MHDoIwZzkWQi5-Oq6RtqD/view?usp=drive_link" },
+                { name: "বাংলাদেশ ও বিশ্বপরিচয়", link: "https://drive.google.com/file/d/1yLV_zwZNPLtj5YD-7UeS0Sa64lv6tm9a/view?usp=drive_link" },
+
+                { name: "ইসলাম শিক্ষা", link: "https://drive.google.com/file/d/15_VyasyRtA8MgLbpLIw1TRp6uhzAzWnJ/view?usp=drive_link" },
+
+                { name: "হিন্দুধর্ম শিক্ষা", link: "https://drive.google.com/file/d/122mZvsicBs4HG1bEP1zts0A4QrMf2e23/view?usp=drive_link" },
+
+                { name: "বৌদ্ধধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1IvQ5cxYu5yovmn47O_7X4MxrAfjekA0q/view?usp=drive_link" },
+                
+                { name: "খ্রিষ্টধর্ম শিক্ষা", link: "https://drive.google.com/file/d/17uQhkiGbzXVd9ing6TNtakHJaaBuwDBk/view?usp=drive_link" }
+            ],
+
+            "class-6": [
+                { name: "চারুপাঠ", link: "https://drive.google.com/file/d/1HMLLnPvoFbwdLUYOyuOYKkuTma6oI0gD/view?usp=drive_link" },
+
+                { name: "আনন্দপাঠ", link: "https://drive.google.com/file/d/16L1WW3QTqQfai9aPayV0gyE5igRMiFeL/view?usp=drive_link" },
+
+                { name: "বাংলা ব্যাকরণ ও নির্মিতি", link: "https://drive.google.com/file/d/1AQo5mMLwsMa_ASt0uYANyl7Cb7zaqq6i/view?usp=drive_link" },
+
+                { name: "English For Today", link: "https://drive.google.com/file/d/1aX0Py2PLwSgh-NVUsTqfI0bqEplYo7WV/view?usp=drive_link" },
+
+                { name: "English Grammar and Composition", link: "https://drive.google.com/file/d/1Tgrw_QZJwpUCKV3LJzcCTZ0Dvhz-bOF0/view?usp=drive_link" },
+
+                { name: "গণিত", link: "https://drive.google.com/file/d/13iUtxnh9u1Q6rFU0gyvpPGLeCSGCEpc7/view?usp=drive_link" },
+
+                { name: "তথ্য ও যোগাযোগ প্রযুক্তি", link: "https://drive.google.com/file/d/1u2zRiyNz6ekcFMRskixrrCUxCyJQHDkr/view?usp=drive_link" },
+
+                { name: "বাংলাদেশ ও বিশ্বপরিচয়", link: "https://drive.google.com/file/d/1FTg1M72voJScYOE_PugZ3V5rt0oD0Ftr/view?usp=drive_link" },
+
+
+                { name: "বিজ্ঞান", link: "https://drive.google.com/file/d/1EPRUddjMf4jjogGagq6J7Rll1OhZRwmk/view?usp=drive_link" },
+
+                { name: "শারীরিক শিক্ষা ও স্বাস্থ্য", link: "https://drive.google.com/file/d/1Og-1g4IW-XrK-QzvICG43lNWL27nvSEx/view?usp=drive_link" },
+
+                { name: "কর্ম ও জীবনমুখী শিক্ষা", link: "https://drive.google.com/file/d/1Gy9byi4NW6bKPEiRDkp28hfrG6KIbH3Y/view?usp=drive_link" },
+
+                { name: "কৃষিশিক্ষা", link: "https://drive.google.com/file/d/1H9OqVnqoCB63MgLkgWunue4EGE6YzS9D/view?usp=drive_link" },
+
+                { name: " গার্হস্থ্যবিজ্ঞান", link: "https://drive.google.com/file/d/1FOF9ie0plvrxpSlsL0MIGsExNd5GQX-j/view?usp=drive_link" },
+
+                { name: "চারু ও কারুকলা", link: "https://drive.google.com/file/d/1WMDPfOIBaQ52Ouz8a5dQLgoUEBMifq7A/view?usp=drive_link" },
+
+                { name: "ইসলাম শিক্ষা", link: "https://drive.google.com/file/d/1uW6-dw-0KlszZ8AQjq5SDE2elq5eZYsN/view?usp=drive_link" },
+
+                { name: "হিন্দুধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1tzM4rRxETJGqhYwEujFedkX_POPegG-v/view?usp=drive_link" },
+
+                { name: "খ্রীষ্টধর্ম শিক্ষা", link: "https://drive.google.com/file/d/16pUxm6P5D2W7J3ITrkeJONf3tI9e0I4L/view?usp=drive_link" },
+
+                { name: "বৌদ্ধধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1e0I5Aq-3PixBdghJPc6Ile4M-GuZ-9CY/view?usp=drive_link" },
+
+                { name: "সচিত্র আরবি পাঠ", link: "https://drive.google.com/file/d/1tksx8BwhTP218yRM7P1bwmhd3xdoDHSl/view?usp=drive_link" },
+
+                { name: "সংস্কৃত", link: "https://drive.google.com/file/d/18Jx95IZP7TbgXrMZ5Z6c7bIrbQmr30cT/view?usp=drive_link" },
+                
+                { name: "পালি", link: "https://drive.google.com/file/d/1qdERVW4prRebbMVUR6JnDgYh5GzZHhvN/view?usp=drive_link" },
+
+                { name: "সংগীত", link: "https://drive.google.com/file/d/1JGiO5Z04mKfVfjkSj3vYwqZfzEG4ZeoG/view?usp=drive_link" },
+                
+                { name: "ক্ষুদ্র নৃগোষ্ঠীর ভাষা ও সংস্কৃতি", link: "https://drive.google.com/file/d/1eSbD4d8NVJ4P7_Dqaqpuwc-m0RP0YBiI/view?usp=drive_link" }
+            ],
+
+            "class-7": [
+            { name: "সপ্তবর্ণা", link: "https://drive.google.com/file/d/15IDsWA0wqIThNLuq8n9ijOsRwXUQJftp/view?usp=drive_link" },
+
+{ name: "আনন্দপাঠ", link: "https://drive.google.com/file/d/1qeM_cZpqk57auIfWzUXTyxwR92oXdW_Z/view?usp=drive_link" },
+
+{ name: "বাংলা ব্যাকরণ ও নির্মিতি", link: "https://drive.google.com/file/d/1gWHxsoJk2BFQ03RmoPIkd-nn5-wZTvJC/view?usp=drive_link" },
+
+{ name: "English For Today", link: "https://drive.google.com/file/d/1XTG6vE0RSM645eE5-XAKMirCzGUPPllz/view?usp=drive_link" },
+
+{ name: "English Grammar and Composition", link: "https://drive.google.com/file/d/15Odrctw-rj3DAR94NKOZEq2jilXYvXw3/view?usp=drive_link" },
+
+{ name: "গণিত", link: "https://drive.google.com/file/d/1iKHx1wxYi7I6REjR-5j8fW1uVI2xT5zH/view?usp=drive_link" },
+
+{ name: "তথ্য ও যোগাযোগ প্রযুক্তি", link: "https://drive.google.com/file/d/1LCG5mQF2hEwCMKXeZDsPCKjbSdaxzlql/view?usp=drive_link" },
+
+{ name: "বাংলাদেশ ও বিশ্বপরিচয়", link: "https://drive.google.com/file/d/1Rjkz4Hjp04VbxMnVZy1Eht1F5O62pmvR/view?usp=drive_link" },
+
+
+{ name: "বিজ্ঞান", link: "https://drive.google.com/file/d/1lb7bQEzhSLG0hZZ9y14GCmhcmxjWpa15/view?usp=drive_link" },
+
+{ name: "শারীরিক শিক্ষা ও স্বাস্থ্য", link: "https://drive.google.com/file/d/18TXQweW4dgrRf_HukG5po1m1LnvPNlJq/view?usp=drive_link" },
+
+{ name: "কর্ম ও জীবনমুখী শিক্ষা", link: "https://drive.google.com/file/d/16BrTYDeGfher_x8ufo6FASdCq1s9xyLO/view?usp=drive_link" },
+
+{ name: "কৃষিশিক্ষা", link: "https://drive.google.com/file/d/1HYtDOWnpMrWYefOk5mZWn8-uMCsCpNUR/view?usp=drive_link" },
+
+{ name: " গার্হস্থ্যবিজ্ঞান", link: "https://drive.google.com/file/d/1N5fgmRdPnK2iYoh_cDNDU5pWDQR2c4F6/view?usp=drive_link" },
+
+{ name: "চারু ও কারুকলা", link: "https://drive.google.com/file/d/1qCVTy-Rvv8Na7XYyv58ktzFJ7Q1xgrc4/view?usp=drive_link" },
+
+{ name: "ইসলাম শিক্ষা", link: "https://drive.google.com/file/d/1sLsI5_oGua43iWq2-s7mzLWnAIZ_xw21/view?usp=drive_link" },
+
+{ name: "হিন্দুধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1hqm1YHfWs0pMTAR9IVyGOSgrhYJEMVsj/view?usp=drive_link" },
+
+{ name: "খ্রীষ্টধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1lUwwWPhm-WnGbO29CvS64vMNuM1Jf97G/view?usp=drive_link" },
+
+{ name: "বৌদ্ধধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1lg43XY8pbIU1xaJO4r05L5fUm-k18z8W/view?usp=drive_link" },
+
+{ name: "সচিত্র আরবি পাঠ", link: "https://drive.google.com/file/d/1-fmIPt8_1Zsf0P_CZweQtQh8Tbde8CpG/view?usp=drive_link" },
+
+{ name: "সংস্কৃত", link: "https://drive.google.com/file/d/1uhBjiqwH3jGj0-6I8AY4KuA48h-NQfsj/view?usp=drive_link" },
+
+{ name: "পালি", link: "https://drive.google.com/file/d/1M4ogfdQ2xr56iVoPVpYhtUHMpWSz3b8z/view?usp=drive_link" },
+
+{ name: "সংগীত", link: "https://drive.google.com/file/d/1a53-DgXmr1n8DyduMzyrdGHDIF8BzUaf/view?usp=drive_link" },
+
+{ name: "ক্ষুদ্র নৃগোষ্ঠীর ভাষা ও সংস্কৃতি", link: "https://drive.google.com/file/d/1-C2uvXzERjBjGnsT-de5npYIajPmLA5T/view?usp=drive_link" }
+            ],
+
+            "class-8": [
+            { name: "সাহিত্য-কণিকা", link: "https://drive.google.com/file/d/14Hg8HRdcjqnhy2raqoAbHL8oHLUbUSwA/view?usp=drive_link" },
+
+{ name: "আনন্দপাঠ", link: "https://drive.google.com/file/d/1fm9ocm4MA3n3SFRpX8KM8sNN0-8Wl_ap/view?usp=drive_link" },
+
+{ name: "বাংলা ব্যাকরণ ও নির্মিতি", link: "https://drive.google.com/file/d/117pXoJyf_LnJgxOy7R9-HcYMOGHeh2cq/view?usp=drive_link" },
+
+{ name: "English For Today", link: "https://drive.google.com/file/d/1N7E-_Dgd1xX5VC4GmJamf4Yo4VEzvTvu/view?usp=drive_link" },
+
+{ name: "English Grammar and Composition", link: "https://drive.google.com/file/d/1MG0Kr84imLCw4gfAPKheQfxZo9JuQ611/view?usp=drive_link" },
+
+{ name: "গণিত", link: "https://drive.google.com/file/d/1UTGLGuQxMMaK_YgErIivbMI_3PcvkRbc/view?usp=drive_link" },
+
+{ name: "তথ্য ও যোগাযোগ প্রযুক্তি", link: "https://drive.google.com/file/d/152cFSzvuZOrWo_BuYhgMav91g8pRpv9I/view?usp=drive_link" },
+
+{ name: "বাংলাদেশ ও বিশ্বপরিচয়", link: "https://drive.google.com/file/d/1HIxFLkgo4ZLG-qUz2achu5K_v40T0cfn/view?usp=drive_link" },
+
+
+{ name: "বিজ্ঞান", link: "https://drive.google.com/file/d/1a5-WIfGsqunOpFz55nCL-AK2y5XVs7zB/view?usp=drive_link" },
+
+{ name: "শারীরিক শিক্ষা ও স্বাস্থ্য", link: "https://drive.google.com/file/d/1uHVBwpr6kIxxHnd1eAAn5HOExlvX3UPb/view?usp=drive_link" },
+
+{ name: "কর্ম ও জীবনমুখী শিক্ষা", link: "https://drive.google.com/file/d/1QULadFx0awbKWKzbUm068CvP5MGr4SAT/view?usp=drive_link" },
+
+{ name: "কৃষিশিক্ষা", link: "https://drive.google.com/file/d/1hpNzkGvJ6Q5efgSB7-Dtt1FnSYrh3zZu/view?usp=drive_link" },
+
+{ name: " গার্হস্থ্যবিজ্ঞান", link: "https://drive.google.com/file/d/1vODdjg4T1KhM1G9bGgCMPOuGO8Bz8Wp_/view?usp=drive_link" },
+
+{ name: "চারু ও কারুকলা", link: "https://drive.google.com/file/d/1k1iLLTPUfwFXXVoe-jZSRWF9EdFuZdkb/view?usp=drive_link" },
+
+{ name: "ইসলাম শিক্ষা", link: "https://drive.google.com/file/d/1108SRYaCP3Po5M3DU1lWe8ZtIhLFTloJ/view?usp=drive_link" },
+
+{ name: "হিন্দুধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1t47vMMl7N0tzBbJ85xOh40SHm45cLvfw/view?usp=drive_link" },
+
+{ name: "খ্রীষ্টধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1Zi57J9PoL1Pr7kwuDaSXQ1V0qvqAlodZ/view?usp=drive_link" },
+
+{ name: "বৌদ্ধধর্ম শিক্ষা", link: "https://drive.google.com/file/d/1Mv7viQSTOXgdUsQA71HlxRi0qmWn3apc/view?usp=drive_link" },
+
+{ name: "সচিত্র আরবি পাঠ", link: "https://drive.google.com/file/d/1I4966t-MMGWtMvIZeHpddEBNnedALluV/view?usp=drive_link" },
+
+{ name: "সংস্কৃত", link: "https://drive.google.com/file/d/1G9lQJ5pWvIQv3CxrsGg0uS8kxay9vC0X/view?usp=drive_link" },
+
+{ name: "পালি", link: "https://drive.google.com/file/d/1DeUhz6u87tbJ3Bnwr4zqj0MBYgqhqTd5/view?usp=drive_link" },
+
+{ name: "সংগীত", link: "https://drive.google.com/file/d/1dNmNrKz3pccmSY9lZEMvRkkwVa9C7cIp/view?usp=drive_link" }
+
+
+            ],
+            "class-11": [
+                { name: "Our bloog site ", link: "https://abstudio01.blogspot.com/" },
+                { name: "AB Photo remove bg ", link: "https://abcoinseo.github.io/AB-remove-bg-/" },
+                { name: "share your thought and you life story no login ", link: "https://abcoinseo.github.io/AB-BrainTap/" }
+            ],
+
+           
+            // Add other class data here
+        };
+
+        function showBooks() {
+            const classSelector = document.getElementById('class-selector');
+            const selectedClass = classSelector.value;
+            const bookList = document.getElementById('book-list');
+
+            bookList.innerHTML = ""; // Clear the list
+
+            if (selectedClass && books[selectedClass]) {
+                books[selectedClass].forEach(book => {
+                    const bookElement = document.createElement('div');
+                    bookElement.className = 'book';
+                    bookElement.innerHTML = `
+                        <span>${book.name}</span>
+                        <button onclick="window.open('${book.link}', '_blank')">Link</button>
+                    `;
+                    bookList.appendChild(bookElement);
+                });
+            } else if (selectedClass) {
+                bookList.innerHTML = "<p>No books available for this class.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
